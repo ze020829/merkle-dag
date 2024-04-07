@@ -15,6 +15,7 @@ type Object struct {
 	Data  []byte
 }
 
+<<<<<<< HEAD
 func Add(store KVStore, node Node, h hash.Hash) ([]byte, error) {
 	// 检查节点是否为文件类型
 	file, ok := node.(File)
@@ -78,4 +79,9 @@ func Add(store KVStore, node Node, h hash.Hash) ([]byte, error) {
 
 	// 返回Merkle Root
 	return merkleRoot, nil
+=======
+func Add(store KVStore, node Node, hp HashPool) []byte {
+	// TODO 将分片写入到KVStore中，并返回Merkle Root
+	return nil
+>>>>>>> c1a60202beb4fd3abcbf7a2bc99c8ff22ea55320
 }
